@@ -454,6 +454,13 @@ a:hover {
   font-size: 1.05rem;
 }
 
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
