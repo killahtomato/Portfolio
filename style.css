@@ -48,7 +48,7 @@ a:hover {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -140,37 +140,34 @@ a:hover {
 }
 
 .hero-main {
-  max-width: 560px;
+  max-width: 980px;
+  padding-right: 200px;
 }
 
 .hero-qr {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  position: fixed;
+  top: 90px;
+  right: 24px;
+  text-align: center;
+  z-index: 50;
 }
 
 .qr-image {
-  width: 140px;
-  height: 140px;
-  border-radius: 12px;
-  border: 2px solid var(--border);
+  width: 1.7in;
+  height: 1.7in;
+  border-radius: 10px;
+  border: 1px solid var(--border);
   background: #ffffff;
-  padding: 6px;
+  padding: 5px;
 }
 
 .qr-label {
+  display: block;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
-  letter-spacing: 0.5px;
-}
-
-.hero .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  letter-spacing: 0.3px;
+  margin-top: 5px;
 }
 
 /* ── Hero ── */
@@ -374,8 +371,12 @@ a:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.project-card:last-child:nth-child(3n + 1) {
+  grid-column: 2;
 }
 
 .project-card {
@@ -444,8 +445,12 @@ a:hover {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+}
+
+.skill-category:last-child:nth-child(3n + 1) {
+  grid-column: 2;
 }
 
 .skill-category h4 {
@@ -585,13 +590,15 @@ a:hover {
     text-align: center;
   }
 
-  .hero-main {
-    max-width: 100%;
+  .hero-qr {
+    position: relative;
+    margin: 0 auto 20px;
+    z-index: 50;
   }
 
   .qr-image {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
   }
 
   .projects-grid {
