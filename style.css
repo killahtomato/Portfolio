@@ -139,6 +139,40 @@ a:hover {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.hero-main {
+  max-width: 560px;
+}
+
+.hero-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: #ffffff;
+  padding: 6px;
+}
+
+.qr-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
 /* ── Hero ── */
 
 .hero {
@@ -544,6 +578,20 @@ a:hover {
 
   .hero-name {
     font-size: 2.2rem;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-main {
+    max-width: 100%;
+  }
+
+  .qr-image {
+    width: 110px;
+    height: 110px;
   }
 
   .projects-grid {
